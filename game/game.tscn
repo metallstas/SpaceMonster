@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8wmevc6ggp6q"]
+
+[ext_resource type="Texture2D" uid="uid://cro4co6xqoajl" path="res://assets/Blue_Nebula_08-1024x1024.png" id="1_l1rk1"]
+[ext_resource type="PackedScene" uid="uid://duvk6notqa5iy" path="res://elements/space_ship/ship.tscn" id="2_h7iqs"]
+[ext_resource type="PackedScene" uid="uid://bldfdj78dypne" path="res://elements/wall/wall.tscn" id="3_4fuuu"]
+
+[node name="game" type="Node2D"]
+texture_filter = 1
+
+[node name="background" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(128, 120)
+texture = ExtResource("1_l1rk1")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 240)
+
+[node name="ship" parent="." instance=ExtResource("2_h7iqs")]
+position = Vector2(129, 209)
+
+[node name="wall" parent="." instance=ExtResource("3_4fuuu")]
+
+[node name="wall2" parent="." instance=ExtResource("3_4fuuu")]
+position = Vector2(256, 0)
