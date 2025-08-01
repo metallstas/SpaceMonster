@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://duvk6notqa5iy"]
+[gd_scene load_steps=7 format=3 uid="uid://duvk6notqa5iy"]
 
+[ext_resource type="Script" uid="uid://drfwl1mqkai66" path="res://elements/space_ship/ship.gd" id="1_crqko"]
 [ext_resource type="Texture2D" uid="uid://dp7cqmdi8lbwa" path="res://assets/MainShip flys-Sheet 2cdr.png" id="2_crqko"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jx27x"]
@@ -28,13 +29,13 @@ animations = [{
 radius = 21.095
 
 [node name="ship" type="CharacterBody2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-85, 15)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_crqko")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e61jr")
-frame_progress = 0.543799
+frame_progress = 0.86184
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

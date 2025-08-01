@@ -15,13 +15,13 @@ texture = ExtResource("1_l1rk1")
 region_enabled = true
 region_rect = Rect2(0, -372, 256, 240)
 
-[node name="ship" parent="." instance=ExtResource("2_h7iqs")]
-position = Vector2(129, 209)
-
 [node name="wall" parent="." instance=ExtResource("3_4fuuu")]
 
 [node name="wall2" parent="." instance=ExtResource("3_4fuuu")]
 position = Vector2(256, 0)
+
+[node name="ship" parent="." instance=ExtResource("2_h7iqs")]
+position = Vector2(129, 209)
 
 [node name="enemy" parent="." instance=ExtResource("4_4fuuu")]
 position = Vector2(208, 32)
