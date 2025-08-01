@@ -1,6 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://duvk6notqa5iy"]
+[gd_scene load_steps=7 format=3 uid="uid://duvk6notqa5iy"]
 
 [ext_resource type="Texture2D" uid="uid://ctbsc2tiaapae" path="res://assets/MainShip main fly.png" id="1_wkvwy"]
+[ext_resource type="Texture2D" uid="uid://dp7cqmdi8lbwa" path="res://assets/MainShip flys-Sheet 2cdr.png" id="2_crqko"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx27x"]
+atlas = ExtResource("2_crqko")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q01hy"]
+atlas = ExtResource("2_crqko")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e61jr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jx27x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q01hy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crqko"]
 radius = 21.095
@@ -9,6 +32,10 @@ radius = 21.095
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_wkvwy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e61jr")
+frame_progress = 0.719698
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -1)
