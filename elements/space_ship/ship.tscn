@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://duvk6notqa5iy"]
+[gd_scene load_steps=6 format=3 uid="uid://duvk6notqa5iy"]
 
-[ext_resource type="Texture2D" uid="uid://ctbsc2tiaapae" path="res://assets/MainShip main fly.png" id="1_wkvwy"]
 [ext_resource type="Texture2D" uid="uid://dp7cqmdi8lbwa" path="res://assets/MainShip flys-Sheet 2cdr.png" id="2_crqko"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jx27x"]
@@ -31,14 +30,14 @@ radius = 21.095
 [node name="ship" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wkvwy")
+position = Vector2(-85, 15)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e61jr")
-frame_progress = 0.719698
+frame_progress = 0.543799
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -1)
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_crqko")
 one_way_collision_margin = 0.0
 debug_color = Color(0.167798, 0.599498, 0.653146, 0.42)

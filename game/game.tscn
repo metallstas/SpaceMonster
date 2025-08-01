@@ -13,7 +13,7 @@ texture_repeat = 2
 position = Vector2(128, 120)
 texture = ExtResource("1_l1rk1")
 region_enabled = true
-region_rect = Rect2(0, 0, 256, 240)
+region_rect = Rect2(0, -372, 256, 240)
 
 [node name="ship" parent="." instance=ExtResource("2_h7iqs")]
 position = Vector2(129, 209)
