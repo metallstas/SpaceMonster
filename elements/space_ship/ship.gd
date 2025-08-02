@@ -18,4 +18,5 @@ func shot():
 	add_child(rocket)
 
 func take_dmg():
-	pass
+	Globals.change_lives(1)
+	

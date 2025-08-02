@@ -42,7 +42,7 @@ position = Vector2(0, -2)
 scale = Vector2(0.390625, 0.390625)
 sprite_frames = SubResource("SpriteFrames_j3lpn")
 autoplay = "default"
-frame_progress = 0.674014
+frame_progress = 0.395043
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-5.96046e-08, -2.98023e-08)

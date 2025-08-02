@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://domioe3qetsyd"]
+
+[ext_resource type="Texture2D" uid="uid://ctbsc2tiaapae" path="res://assets/MainShip main fly.png" id="1_vyk5u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dakft"]
+atlas = ExtResource("1_vyk5u")
+region = Rect2(5, 2, 37, 42)
+
+[node name="live_rect" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+texture = SubResource("AtlasTexture_dakft")
+expand_mode = 1
+stretch_mode = 5
