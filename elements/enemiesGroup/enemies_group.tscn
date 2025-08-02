@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://3rbbu4orfxam"]
+
+[ext_resource type="Script" uid="uid://cq11gaiqo5p7l" path="res://elements/enemiesGroup/enemies_group.gd" id="1_kf6py"]
+[ext_resource type="PackedScene" uid="uid://cm6ntjsg60bdr" path="res://elements/enemy/enemy.tscn" id="2_ivlee"]
+
+[node name="enemiesGroup" type="Node2D" groups=["enemy_group"]]
+script = ExtResource("1_kf6py")
+
+[node name="enemy" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(30, 30)
+
+[node name="enemy2" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(60, 30)
+
+[node name="enemy3" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(90, 30)
+
+[node name="enemy4" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(120, 30)
+
+[node name="enemy5" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(150, 30)
+
+[node name="enemy6" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(180, 30)
+
+[node name="enemy7" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(210, 30)
+
+[node name="enemy8" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(45, 57)
+
+[node name="enemy9" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(75, 57)
+
+[node name="enemy10" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(105, 57)
+
+[node name="enemy11" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(135, 57)
+
+[node name="enemy12" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(165, 57)
+
+[node name="enemy13" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(195, 57)
+
+[node name="enemy14" parent="." instance=ExtResource("2_ivlee")]
+position = Vector2(225, 57)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="TimerShot" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="TimerShot" to="." method="_on_timer_shot_timeout"]

@@ -35,6 +35,7 @@ script = ExtResource("1_crqko")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e61jr")
+autoplay = "default"
 frame_progress = 0.86184
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
