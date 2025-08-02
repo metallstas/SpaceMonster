@@ -19,4 +19,4 @@ func add_lives():
 	add_child(rect_scene.instantiate())
 	
 func remove_live():
- 	get_child(0).queue_free()
+	get_child(0).queue_free()
