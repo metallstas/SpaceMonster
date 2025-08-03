@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dm1x0se6pdnec"]
 
-[ext_resource type="Texture2D" uid="uid://c16exysbsni50" path="res://assets/rocket-Sheet.png" id="1_7qe8a"]
+[ext_resource type="Texture2D" uid="uid://2huv4hjcf6bg" path="res://assets/rocket-Sheet.png" id="1_7qe8a"]
 [ext_resource type="Script" uid="uid://dnytuiokthdpm" path="res://elements/rocket/rocket.gd" id="1_e8x5b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e8x5b"]
@@ -40,7 +40,8 @@ scale = Vector2(0.270833, 0.270833)
 sprite_frames = SubResource("SpriteFrames_j62tl")
 animation = &"fly"
 autoplay = "fly"
-frame_progress = 0.434337
+frame = 1
+frame_progress = 0.839109
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
