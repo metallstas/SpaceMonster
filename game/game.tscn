@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8wmevc6ggp6q"]
+[gd_scene load_steps=8 format=3 uid="uid://c8wmevc6ggp6q"]
 
 [ext_resource type="Script" uid="uid://b6iguk5uupcum" path="res://game/game.gd" id="1_dakft"]
 [ext_resource type="Texture2D" uid="uid://cro4co6xqoajl" path="res://assets/Blue_Nebula_08-1024x1024.png" id="1_l1rk1"]
 [ext_resource type="PackedScene" uid="uid://duvk6notqa5iy" path="res://elements/space_ship/ship.tscn" id="2_h7iqs"]
 [ext_resource type="PackedScene" uid="uid://bldfdj78dypne" path="res://elements/wall/wall.tscn" id="3_4fuuu"]
+[ext_resource type="Script" uid="uid://di3x0vd7fklyp" path="res://game/background.gd" id="3_u5opy"]
 [ext_resource type="PackedScene" uid="uid://3rbbu4orfxam" path="res://elements/enemiesGroup/enemies_group.tscn" id="4_4fuuu"]
 [ext_resource type="PackedScene" uid="uid://cds366ln4bbnm" path="res://elements/HUD/hud.tscn" id="5_dxrkv"]
 
@@ -16,7 +17,8 @@ texture_repeat = 2
 position = Vector2(128, 120)
 texture = ExtResource("1_l1rk1")
 region_enabled = true
-region_rect = Rect2(0, -372, 256, 240)
+region_rect = Rect2(0, -369.265, 256, 240)
+script = ExtResource("3_u5opy")
 
 [node name="wall" parent="." instance=ExtResource("3_4fuuu")]
 
