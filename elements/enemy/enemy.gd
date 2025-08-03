@@ -10,6 +10,7 @@ func _physics_process(delta: float) -> void:
 
 func destroy():
 	Globals.change_points(10)
+	Events.enemy_died.emit()
 	queue_free()
 
 func shot() -> void:

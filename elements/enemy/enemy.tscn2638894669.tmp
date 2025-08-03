@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://cm6ntjsg60bdr"]
+
+[ext_resource type="Script" uid="uid://be6yq85gr54c8" path="res://elements/enemy/enemy.gd" id="1_j4vrh"]
+[ext_resource type="Texture2D" uid="uid://3pfcvkb5olmn" path="res://assets/monster.png" id="1_ttpur"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4vrh"]
+atlas = ExtResource("1_ttpur")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek21h"]
+atlas = ExtResource("1_ttpur")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cx0d"]
+atlas = ExtResource("1_ttpur")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjsli"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4vrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ek21h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cx0d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_24dpr"]
+radius = 11.0
+
+[node name="enemy" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_j4vrh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9.53674e-07, -9.53674e-07)
+scale = Vector2(0.666667, 0.666667)
+sprite_frames = SubResource("SpriteFrames_vjsli")
+animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.364645
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_24dpr")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-15, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(15, 0)
